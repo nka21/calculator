@@ -9,4 +9,4 @@ pnpm tauri dev
 
 
 ## アプリ画面
-![スクリーンショット](/.github/assets/screenshot.png)
+<img src="/.github/assets/screenshot.png" alt="スクリーンショット" width="300">
