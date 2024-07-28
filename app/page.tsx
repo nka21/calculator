@@ -45,20 +45,22 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-[#333] p-6">
-      {/* 現在の計算結果を表示するコンポーネント */}
-      <DisplayValue value={display} />
-      <div className="grid grid-cols-4 gap-2">
-        {/* BUTTON_CONFIGからボタンの設定を読み込み、それぞれをレンダリング */}
-        {BUTTON_CONFIG.map((button, index) => (
-          <CalculatorButton
-            key={index}
-            onClick={() => handleButtonClick(button.type, button.label)}
-            className={button.className}
-          >
-            {button.label}
-          </CalculatorButton>
-        ))}
+    <div className="h-screen flex justify-center items-center">
+      <div className="bg-[#333] p-6 shadow-xl rounded-lg">
+        {/* 現在の計算結果を表示するコンポーネント */}
+        <DisplayValue value={display} />
+        <div className="grid grid-cols-4 gap-2">
+          {/* BUTTON_CONFIGからボタンの設定を読み込み、それぞれをレンダリング */}
+          {BUTTON_CONFIG.map((button, index) => (
+            <CalculatorButton
+              key={index}
+              onClick={() => handleButtonClick(button.type, button.label)}
+              className={button.className}
+            >
+              {button.label}
+            </CalculatorButton>
+          ))}
+        </div>
       </div>
     </div>
   );
